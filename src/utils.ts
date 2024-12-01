@@ -29,7 +29,6 @@ export function computeNext(curr: boolean[][]) {
                 if (curr[i + 1][j]) aliveNeighbours += 1 // bottom
                 if (j < curr[i].length - 1 && curr[i + 1][j + 1]) aliveNeighbours += 1 // bottom right
             }
-            console.log(i, j, aliveNeighbours)
             if (curr[i][j]) {
                 // is alive
                 if (aliveNeighbours < 2) next[i][j] = false
