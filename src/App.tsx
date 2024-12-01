@@ -19,6 +19,7 @@ function App() {
     return (
         <main className="bg-slate-900 min-h-lvh text-white p-5 flex flex-col gap-8 justify-center items-center">
             <h1 className="text-5xl">Conway's Game Of Life</h1>
+            <a className="text-blue-400 hover:text-blue-600" href="https://github.com/chuakid/conways-game-of-life">Source</a>
             <section className="bg-slate-800 p-5 rounded-2xl">
                 <h2 className="text-3xl">Rules</h2>
                 <ul>
