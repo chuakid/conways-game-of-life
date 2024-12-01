@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import './tailwind.css'
 import {computeNext, createEmptyGrid} from "./utils.ts";
+import Description from "./components/Description.tsx";
 
 
 function App() {
@@ -20,22 +21,7 @@ function App() {
         <main className="bg-slate-900 min-h-lvh text-white p-5 flex flex-col gap-8 justify-center items-center">
             <h1 className="text-5xl">Conway's Game Of Life</h1>
             <a className="text-blue-400 hover:text-blue-600" href="https://github.com/chuakid/conways-game-of-life">Source</a>
-            <section className="bg-slate-800 p-5 rounded-2xl">
-                <h2 className="text-3xl">Rules</h2>
-                <ul>
-                    <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
-                    <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
-                    <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
-                    <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-                    </li>
-                </ul>
-            </section>
-
-            <section className="bg-slate-800 p-5 rounded-2xl">
-                <h2 className="text-3xl">How to use</h2>
-                <p>Pressing start will start the simulation. Click on any of the squares to toggle that cell.</p>
-            </section>
-
+            <Description />
             <div className="flex gap-1">
                 <div className="flex gap-5 p-5 border border-blue-500 rounded-2xl">
                     <label>Rows</label>
