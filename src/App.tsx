@@ -13,11 +13,11 @@ function App() {
     const [start, setStart] = useState(false)
     const [edit, setEdit] = useState(false)
     useEffect(() => {
-        const timer = setInterval(() => {
+        const timer = start ? setInterval(() => {
             if (start) {
-                setGrid(computeNext(grid))
+                setGrid(prev => computeNext(prev))
             }
-        }, 500)
+        }, 500) : 0
         return () => clearInterval(timer)
     }, [grid, start])
 
