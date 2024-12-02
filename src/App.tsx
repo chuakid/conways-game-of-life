@@ -24,8 +24,9 @@ function App() {
       newGrid[i][j] = !grid[i][j];
       return newGrid;
     });
-
   };
+
+
 
   return (
     <main className="bg-slate-900 min-h-lvh text-white p-5 flex flex-col gap-8 justify-center items-center">
@@ -33,7 +34,7 @@ function App() {
       <a className="text-blue-400 hover:text-blue-600"
          href="https://github.com/chuakid/conways-game-of-life">Source</a>
       <Description />
-      <div className="flex gap-1">
+      <div className="flex gap-1 flex-wrap">
         <div className="flex gap-5 p-5 border border-blue-500 rounded-2xl">
           <label>Rows</label>
           <input className="cursor-pointer" type="range" onChange={e => {
