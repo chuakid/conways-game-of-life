@@ -55,8 +55,13 @@ function App() {
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer w-fit"
           onClick={() => setStart(!start)
-          }>{start ? "Stop" : "Start"}</button>
-
+          }>{start ? "Stop" : "Start"}
+        </button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer w-fit"
+          onClick={() => setGrid(createEmptyGrid(gridSize[0], gridSize[1]))
+          }>Clear
+        </button>
       </div>
 
       <div>
