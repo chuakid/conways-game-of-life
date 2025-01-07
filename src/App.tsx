@@ -17,7 +17,7 @@ function App() {
       }
     }, speed) : 0;
     return () => clearInterval(timer);
-  }, [grid, start, speed]);
+  }, [start, speed]);
 
   const toggle = (i: number, j: number) => {
     setStart(false);
@@ -33,7 +33,7 @@ function App() {
     <main className="bg-slate-900 min-h-lvh text-white p-5 flex flex-col gap-8 justify-center items-center">
       <h1 className="text-5xl">Conway's Game Of Life</h1>
       <a className="text-blue-400 hover:text-blue-600"
-         href="https://github.com/chuakid/conways-game-of-life">Source</a>
+        href="https://github.com/chuakid/conways-game-of-life">Source</a>
       <Description />
       <div className="flex gap-1 flex-wrap">
         <ControlGroup>
@@ -55,7 +55,7 @@ function App() {
         <ControlGroup>
           <label>Speed (ms per step)</label>
           <input step={10} min={10} max={1000} className="cursor-pointer" type="range"
-                 onChange={e => setSpeed(Number(e.target.value))} />
+            onChange={e => setSpeed(Number(e.target.value))} />
           <span>{speed}</span>
         </ControlGroup>
       </div>
@@ -76,11 +76,11 @@ function App() {
         {grid.map((row, i) =>
           <div key={`${i}`} className="flex gap-1 mb-1">
             {row.map((col, j) => <div key={`${i}-${j}`}
-                                      className={`${col ? "bg-green-500" : "bg-slate-700"} w-5 h-5`}
-                                      onMouseOver={(event) => {
-                                        if (event.buttons === 1) toggle(i, j);
-                                      }}
-                                      onClick={() => toggle(i, j)}
+              className={`${col ? "bg-green-500" : "bg-slate-700"} w-5 h-5`}
+              onMouseOver={(event) => {
+                if (event.buttons === 1) toggle(i, j);
+              }}
+              onClick={() => toggle(i, j)}
             />)}
           </div>)
         }
